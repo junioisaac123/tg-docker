@@ -22,3 +22,35 @@ This is the tg project docker struct with containers using:
  ├── docker-compose.yml # Struct for project compose containers
  └── README.md
 ```
+
+## Run
+
+Clone the actual project
+
+```bash
+git clone https://github.com/junioisaac123/tg-docker
+```
+
+Go inside the folder
+
+```bash
+cd tg-docker
+```
+
+Clone the laravel project to `laravel-app`
+
+```bash
+git clone https://github.com/junioisaac123/tg-2024 laravel-app
+```
+
+Run the docker build
+
+```bash
+docker compose up -d --build
+```
+
+### Stop
+
+```bash
+docker compose down
+```

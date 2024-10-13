@@ -15,9 +15,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Establece el directorio de trabajo
 WORKDIR /var/www/html
 
-# Copia el archivo de configuración de Nginx
-#COPY ./docker/web/default.conf /etc/nginx/conf.d/default.conf
-
 # Permisos
 RUN chown -R www-data:www-data /var/www
 

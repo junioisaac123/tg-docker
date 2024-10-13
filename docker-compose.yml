@@ -7,7 +7,7 @@ services:
     working_dir: /var/www/html
     volumes:
       - ./containers/nginx/templates:/etc/nginx/templates
-      - laravel-app:/var/www/html:rw
+      - ./laravel-app:/var/www/html:z
       - ./containers/logs:/var/log/nginx:rw
     ports:
       - "8080:80"
@@ -22,7 +22,7 @@ services:
     build: ./containers/php-fpm
     working_dir: /var/www/html
     volumes:
-      - laravel-app:/var/www/html:rw
+      - ./laravel-app:/var/www/html:z
       - ./containers/logs:/var/log/php:rw
     networks:
       - laravel
@@ -65,4 +65,3 @@ networks:
 
 volumes:
   dbdata:
-  laravel-app:
