@@ -1,4 +1,4 @@
 *.bak
-./containers/db/*
-./containers/logs/*
-./laravel-app
+containers/db/*
+containers/logs/*
+laravel-app
